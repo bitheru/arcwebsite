@@ -1,22 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Create your ARC account and pick your first task group.">
+  <meta name="description" content="See how the planned ARC productivity website would organize tasks and goals.">
   <title>Get Started | ARC</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-
   <header class="site-header">
-    <a href="index.html" class="logo">
-      <img src="images/arcofficial.png" alt="ARC logo" width="40" height="40">
+    <a href="index.html" class="logo" aria-label="ARC home">
+      <img src="images/arcofficial.png" alt="" width="40" height="40">
       <span>ARC</span>
     </a>
-
     <nav aria-label="Main navigation">
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -38,38 +35,37 @@
       </ul>
     </nav>
   </header>
-
   <main>
     <section class="page-intro">
-      <p class="eyebrow">Get Started</p>
-      <h1>Create your account.</h1>
-      <p class="hero-text">It takes less than a minute. You can add more groups later.</p>
+      <p class="eyebrow">Get started</p>
+      <h1>Make progress one step at a time.</h1>
+      <p class="hero-text">ARC is designed to keep daily tasks connected to bigger goals. Here's how the idea would work.</p>
     </section>
 
-    <form class="signup-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" autocomplete="name" required>
+    <section class="steps" aria-label="How ARC works">
+      <article class="step">
+        <span class="step-number">01</span>
+        <h2>Choose a task group</h2>
+        <p>Start with Work, Learning, Fitness, or whichever part of your day you want to organize.</p>
+      </article>
+      <article class="step">
+        <span class="step-number">02</span>
+        <h2>Break down your goal</h2>
+        <p>Add smaller tasks, deadlines and milestones so the next step is always clear.</p>
+      </article>
+      <article class="step">
+        <span class="step-number">03</span>
+        <h2>Follow your progress</h2>
+        <p>Use the planned calendar, time tracking and progress views to stay consistent.</p>
+      </article>
+    </section>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" autocomplete="email" required>
-
-      <label for="group">First task group</label>
-      <select id="group" name="group">
-        <option value="work">Work</option>
-        <option value="fitness">Fitness</option>
-        <option value="finances">Finances</option>
-        <option value="learning">Learning</option>
-        <option value="personal">Personal</option>
-        <option value="relationships">Relationships</option>
-        <option value="projects">Projects</option>
-        <option value="custom">Custom</option>
-        <option value="diet-plans">Diet Plans</option>
-      </select>
-
-      <button type="submit" class="btn btn-solid">Create Account</button>
-    </form>
+    <section class="preview-note">
+      <h2>About this preview</h2>
+      <p>This is the HTML and CSS version of ARC. The pages demonstrate its layout and proposed features; accounts, task saving, calendar connections and time tracking are not active in this version.</p>
+      <a href="features.html" class="btn btn-solid">Browse task groups</a>
+    </section>
   </main>
-
   <footer class="site-footer">
     <p>&copy; 2026 KALTIBRY. Made by Team ARC.</p>
   </footer>
