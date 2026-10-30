@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your ARC account and pick your first task group.">
+  <title>Get Started | ARC</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <img src="images/arcofficial.png" alt="ARC logo" width="40" height="40">
+      <span>ARC</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="features.html" class="dropdown-toggle">Features</a>
+          <ul class="dropdown-menu">
+            <li><a href="features.html#work">Work</a></li>
+            <li><a href="features.html#fitness">Fitness</a></li>
+            <li><a href="features.html#finances">Finances</a></li>
+            <li><a href="features.html#learning">Learning</a></li>
+            <li><a href="features.html#personal">Personal</a></li>
+            <li><a href="features.html#relationships">Relationships</a></li>
+            <li><a href="features.html#projects">Projects</a></li>
+            <li><a href="features.html#custom">Custom</a></li>
+            <li><a href="features.html#diet-plans">Diet Plans</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <p class="eyebrow">Get Started</p>
+      <h1>Create your account.</h1>
+      <p class="hero-text">It takes less than a minute. You can add more groups later.</p>
+    </section>
+
+    <!-- A form is plain HTML. Without JavaScript or a server it won't save anything yet,
+         but the structure is ready for when your team adds a backend.
+         Each <label for="x"> matches an input with id="x". Click the label and the input
+         gets focus. The validator and screen readers both look for this. -->
+    <form class="signup-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" autocomplete="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" autocomplete="email" required>
+
+      <label for="group">First task group</label>
+      <select id="group" name="group">
+        <option value="work">Work</option>
+        <option value="fitness">Fitness</option>
+        <option value="finances">Finances</option>
+        <option value="learning">Learning</option>
+        <option value="personal">Personal</option>
+        <option value="relationships">Relationships</option>
+        <option value="projects">Projects</option>
+        <option value="custom">Custom</option>
+        <option value="diet-plans">Diet Plans</option>
+      </select>
+
+      <button type="submit" class="btn btn-solid">Create Account</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Focal Point. Made by Team ARC.</p>
+  </footer>
+</body>
+</html>

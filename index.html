@@ -31,8 +31,20 @@
       <!-- Navigation is a LIST of links, so we use <ul>/<li>. That's the semantic way. -->
       <ul class="nav-links">
         <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="features.html">Features</a></li>
-        <li><a href="task-groups.html">Task Groups</a></li>
+        <li class="dropdown">
+          <a href="features.html" class="dropdown-toggle">Features</a>
+          <ul class="dropdown-menu">
+            <li><a href="features.html#work">Work</a></li>
+            <li><a href="features.html#fitness">Fitness</a></li>
+            <li><a href="features.html#finances">Finances</a></li>
+            <li><a href="features.html#learning">Learning</a></li>
+            <li><a href="features.html#personal">Personal</a></li>
+            <li><a href="features.html#relationships">Relationships</a></li>
+            <li><a href="features.html#projects">Projects</a></li>
+            <li><a href="features.html#custom">Custom</a></li>
+            <li><a href="features.html#diet-plans">Diet Plans</a></li>
+          </ul>
+        </li>
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>

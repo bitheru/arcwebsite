@@ -176,6 +176,211 @@ a {
 }
 
 
+/* ---------- 6b. DROPDOWN MENU (no JavaScript) ----------
+   How it works:
+   1. .dropdown is the parent <li>. position: relative makes it
+      the anchor point for the menu.
+   2. .dropdown-menu is hidden (display: none) and positioned
+      absolutely, so it floats BELOW the link instead of pushing
+      the page down.
+   3. :hover (mouse) and :focus-within (keyboard Tab, or a tap on
+      phones) switch it to display: block. */
+.dropdown {
+  position: relative;
+}
+
+/* ::after adds a small arrow after "Features" with no extra HTML */
+.dropdown-toggle::after {
+  content: " \25BE";   /* the ▾ character */
+  font-size: 0.8em;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);   /* centers the menu under the link */
+  min-width: 190px;
+  padding: 0.75rem 0 0.5rem;     /* top padding bridges the gap so hover doesn't break */
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  z-index: 100;                  /* keeps it on top of the page content */
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1.25rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  background: var(--border);
+  color: var(--text);
+}
+
+
+/* ---------- 6c. FEATURES PAGE ---------- */
+
+/* Smooth scrolling when a #link jumps down the page */
+html {
+  scroll-behavior: smooth;
+}
+
+.page-intro {
+  text-align: center;
+  padding: 5rem 5% 3rem;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.page-intro h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+/* Quick-jump "pill" links, which wrap onto multiple lines automatically */
+.jump-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  list-style: none;
+}
+
+.jump-links a {
+  display: block;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.jump-links a:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
+/* Each task group section */
+.group {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  padding: 2.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  scroll-margin-top: 1.5rem;   /* small gap above the section after jumping to it */
+}
+
+/* :target = the section whose id is in the URL right now (e.g. #fitness).
+   It highlights the group you just clicked on in the dropdown. */
+.group:target {
+  border-color: var(--text);
+}
+
+.group h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.group-overview {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.group h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.group-goals {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.group-goals li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+/* custom bullet: a small dash, in the style of the logo's line */
+.group-goals li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0.8rem;
+  height: 1px;
+  background: var(--text);
+}
+
+/* Filled button version, used for "Get Started Now" */
+.btn-solid {
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.btn-solid:hover {
+  background: transparent;
+  color: var(--text);
+}
+
+
+/* ---------- 6d. GET STARTED FORM ---------- */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 420px;
+  margin: 0 auto 3rem;
+  padding: 0 5%;
+}
+
+.signup-form input,
+.signup-form select {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+  outline: 2px solid var(--text);
+  outline-offset: 1px;
+}
+
+.signup-form button {
+  margin-top: 0.5rem;
+  border: 1px solid var(--accent);
+}
+
+
 /* =========================================================
    7. RESPONSIVE: the 3 configurations your rubric asks for
    ---------------------------------------------------------
@@ -193,6 +398,14 @@ a {
 
   .card-grid {
     grid-template-columns: repeat(2, 1fr);   /* 3 columns → 2 */
+  }
+
+  .page-intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .group {
+    margin: 0 5% 1.5rem;   /* side margins so cards don't touch the screen edge */
   }
 }
 
@@ -220,5 +433,27 @@ a {
 
   .card-grid {
     grid-template-columns: 1fr;   /* 2 columns → 1 */
+  }
+
+  .page-intro {
+    padding: 3rem 5% 2rem;
+  }
+
+  .page-intro h1 {
+    font-size: 2rem;
+  }
+
+  .group {
+    padding: 1.5rem;
+  }
+
+  .group h2 {
+    font-size: 1.6rem;
+  }
+
+  /* full-width button is easier to tap with a thumb */
+  .group .btn {
+    display: block;
+    text-align: center;
   }
 }
