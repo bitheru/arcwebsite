@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
+  <!-- page details and stylesheet -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About ARC by KALTIBRY: who we are, what we believe, and the team behind it.">
+  <meta name="description" content="Learn about ARC, a student project and productivity website concept.">
   <title>About | ARC</title>
-
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
 
+  <!-- header with the logo and navigation -->
+
   <header class="site-header">
-    <a href="index.html" class="logo">
-      <img src="images/arcofficial.png" alt="ARC logo" width="40" height="40">
+    <a href="index.html" class="logo" aria-label="ARC home">
+      <img src="images/arcofficial.png" alt="" width="40" height="40">
       <span>ARC</span>
     </a>
+
+    <!-- main links and the features dropdown -->
 
     <nav aria-label="Main navigation">
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li class="dropdown">
           <a href="features.html" class="dropdown-toggle">Features</a>
+
+          <!-- dropdown links for the task groups -->
+
           <ul class="dropdown-menu">
             <li><a href="features.html#work">Work</a></li>
             <li><a href="features.html#fitness">Fitness</a></li>
@@ -35,69 +42,56 @@
             <li><a href="features.html#diet-plans">Diet Plans</a></li>
           </ul>
         </li>
-        <!-- aria-current moved here, since this is the About page -->
         <li><a href="about.html" aria-current="page">About</a></li>
       </ul>
     </nav>
   </header>
-
   <main>
-    <section class="hero">
-      <p class="eyebrow">About KALTIBRY</p>
-      <h1>Big goals, one step at a time.</h1>
-      <p class="hero-text">
-        We built ARC to help you manage the steps that lead to getting things done,
-        and to hold you accountable to the bigger goals in your work and personal life.
-      </p>
-      <a href="getstarted.html" class="btn">Get Started Now</a>
+
+    <!-- about page title and intro -->
+
+    <section class="page-intro">
+      <p class="eyebrow">About ARC</p>
+      <h1>Less time organizing. More time doing.</h1>
+      <p class="hero-text">ARC is a productivity website concept built around one idea: keeping your goals and daily tasks in the same place.</p>
     </section>
 
-    <section class="features-preview" aria-labelledby="beliefs-heading">
-      <h2 id="beliefs-heading">What we believe</h2>
+    <!-- main information about arc -->
 
-      <div class="card-grid">
-        <article class="card">
-          <h3>Small steps win</h3>
-          <p>Big goals feel impossible until you break them down. ARC turns them into steps you can finish today.</p>
-        </article>
+    <section class="about-content">
 
-        <article class="card">
-          <h3>Accountability matters</h3>
-          <p>Tracking your time and progress keeps you honest about where your day actually goes.</p>
-        </article>
+      <!-- why we came up with arc -->
 
-        <article class="card">
-          <h3>Your whole life counts</h3>
-          <p>Work, fitness, money, learning and the people you care about all belong in one plan.</p>
-        </article>
-      </div>
+      <article class="about-block">
+        <h2>Why ARC?</h2>
+        <p>School, work, personal projects and everyday responsibilities often end up scattered across different apps or notes. ARC aims to bring those plans together without making task management another task of its own.</p>
+      </article>
+      <article class="about-block">
+
+        <!-- planned features of the app -->
+
+        <h2>What we're designing</h2>
+        <p>The planned application includes task groups, shared workspaces, calendar connections and time tracking. Users would be able to divide larger goals into manageable steps and check their progress over time.</p>
+      </article>
+      <article class="about-block">
+
+        <!-- details about the class project -->
+
+        <h2>About this project</h2>
+        <p>This website was created for CS146 in Fall 2026. The current deliverable focuses on semantic HTML, a consistent visual design, and responsive layouts for desktop, tablet and phone screens.</p>
+      </article>
     </section>
 
-    <!-- TEAM: replace the placeholder names and roles with your real team.
-         Need more people? Copy one whole <article> block and paste it below.
-         Fewer? Delete a block. The grid adjusts on its own. -->
-    <section class="features-preview" aria-labelledby="team-heading">
-      <h2 id="team-heading">Meet the team</h2>
+    <!-- link back to the features page -->
 
-      <div class="card-grid">
-        <article class="card">
-          <h3>Thomas Paredes</h3>
-        </article>
-
-        <article class="card">
-          <h3>Iva Ctevokic</h3>
-        </article>
-
-        <article class="card">
-          <h3>Bryson Edouard</h3>
-        </article>
-
-        <article class="card">
-          <h3>Kal Vega</h3>
-        </article>
-      </div>
+    <section class="home-cta">
+      <h2>Take a look around.</h2>
+      <p>See the different task groups ARC is being designed to support.</p>
+      <a href="features.html" class="btn btn-solid">Explore features</a>
     </section>
   </main>
+
+  <!-- page footer -->
 
   <footer class="site-footer">
     <p>&copy; 2026 KALTIBRY. Made by Team ARC.</p>
